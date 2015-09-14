@@ -8,7 +8,7 @@ if (Meteor.isClient) {
             // User logged in
             if (user && user.groupId){
                 // User in in a group
-                Session.set("board", "budget");
+                Session.set("board", "getStartet");
             } else {
                 // User not in group
                 Session.set("board", "getStartet");

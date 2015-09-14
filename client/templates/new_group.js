@@ -6,7 +6,8 @@ Template.newGroup.events({
     var $firstMailInput = $(event.target).find('#mail-1');
 
     if (! $wgInput.val() || ! $firstMailInput.val()) {
-      return;
+        Session.set("board", "failGroup");
+        return;
     }
 
     // Get Recipients
@@ -29,7 +30,7 @@ Template.newGroup.events({
 
     Session.set("board", "succesGroup");
 
-    window.location.href = mail;
+    window.open(mail).close();
     
     $wgInput.val('');
   }
