@@ -1,13 +1,19 @@
 <template name="newGroup">
-    <h1>new Group</h1>
+    <h1 class="headline">new Group</h1>
 
     <hr>
     this is the new group site
 
 
-    <button class="btn-primary" id="getStartet">back</button>
+    <button class="btn-primary" id="getStartet">back</button><br/>
+
+    <form class="group-new">
+      <input id="wg-name" type="text" placeholder="Gib den Namen deiner WG ein"><br/>
+      <input id="mail-1" type="email" placeholder="Gib die Mail von einem Mitbewohner ein"><br/>
+      <input type="submit" value="WG gründen">
+    </form>
 
     zuerst muss noch das email programm geöffnet werden. das lassen wir aber kurz aus
-    <button class="btn-primary" id="succesGroup"> ok</button>
+    <button id="succesGroup"> ok</button>
 
 </template>

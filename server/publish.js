@@ -7,6 +7,10 @@ Meteor.publish('userData', function() {
   return Meteor.users.find(this.userId, {fields: {groupId: 1} });
 });
 
+Meteor.publish('invitations', function() {
+  return Invitations.find();
+});
+
 // Meteor.publish('users', function(groupId) {
 //   return Meteor.users.find({groupId: groupId});
 // });

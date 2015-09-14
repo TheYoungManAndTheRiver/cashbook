@@ -1,3 +1,60 @@
+#login-buttons{height:500px;}
+
 body {
-    background: lightpink;
+    background: lemonchiffon;
+}
+
+h1, body {
+    color: tomato;
+font-family:  sans-serif;
+font-variant: small-caps;
+font-weight: 100;
+line-height: 30px;
+    text-align: center
+}
+
+#main {
+    padding: 5px;
+}
+
+.naviDotsGetStarted{
+    padding-bottom: 30px;
+}
+
+.icon {
+    font-size: 70px;
+}
+
+h1.headline {
+    padding-top: 35px;
+}
+
+ul.off-canvas-list li a:hover {
+    background: tomato;
+}
+
+hr {
+    border: solid tomato 1px;
+    width: 150px;
+    margin-left: 114px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.tab-bar{width:100%;}
+
+.inner-wrap{min-height:265px;}
+
+.main-section{padding:10px;}
+
+.move-right .exit-off-canvas {
+    box-shadow: -4px 0 4px rgba(110, 17, 0, 0.5), 4px 0 4px rgba(110, 17, 0, 0.5);
+}
+.left-off-canvas-menu, ul.off-canvas-list li label, .tab-bar .menu-icon, .tab-bar, .tab-bar h1{
+    background: tomato;
+    color: lemonchiffon;}
+
+ul.off-canvas-list li label, ul.off-canvas-list li a {
+    border-bottom: 1px solid lemonchiffon;
+    color: lemonchiffon;
 }
