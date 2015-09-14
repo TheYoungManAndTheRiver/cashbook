@@ -1,0 +1,44 @@
+<head>
+    <title>start</title>
+</head>
+
+<body>
+    <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+            <nav class="tab-bar">
+                <section class="left-small">
+                    <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+                </section>
+
+                <section class="middle tab-bar-section">
+                    <h1 class="title">Cash book</h1>
+                </section>
+            </nav>
+
+            <aside class="left-off-canvas-menu">
+                <ul class="off-canvas-list">
+                    <li><label>Menü</label></li>
+                    <li> <button class="btn-primary" id="getStartet">Home</button>
+                    </li>
+                    <li> <button class="btn-primary" id="budget">ihr wg name</button>
+                    </li>
+                </ul>
+            </aside>
+
+            <div class="container">
+                <div id="main">
+                    {{> start}}
+                </div>
+            </div>
+
+            <a class="exit-off-canvas"></a>
+
+        </div>
+    </div>
+</body>
+
+<template name="start">
+    <div style="background-color: green">
+        {{> Template.dynamic template=active data=this}}
+    </div>
+</template>
