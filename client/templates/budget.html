@@ -1,13 +1,16 @@
 <template name="budget">
 
     <h1  class="headline">budget Site</h1>
-  <input/>
-  <p>gib dein budget ein!</p>
+    <form class="budget-new">
+      <input id="budget" type="number" placeholder="Gib dein Budget ein!"><br/>
+      <input type="submit" value="Budget speichern">
+    </form>
+    <p>gib dein budget ein!</p>
 
     <div class="budgets">
-    {{#each budget}}
+    {{#each budgets}}
     <div class="budget-content">
-        <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+        <h3>{{amount}}</h3>
     </div>
     {{/each}}
         </div>

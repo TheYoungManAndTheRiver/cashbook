@@ -40,6 +40,7 @@ if (Meteor.isClient) {
             event.preventDefault();
             console.log(event.target.id);
             Session.set('board', event.target.id);
+            $(".off-canvas-wrap").removeClass("move-right");
         }
     });
 }

@@ -1,17 +1,25 @@
-var budgetData = [
-    {
-        title: 'erstes Budget',
-        url: 'http://sachagreif.com/introducing-telescope'
-    },
-    {
-        title: 'budget 2',
-        url: 'http://meteor.com'
-    },
-    {
-        title: 'Budget 3',
-        url: 'http://themeteorbook.com'
-    }
-];
+Template.budget.created = function () {
+    var user = Meteor.user();
+    Meteor.subscribe('budgets', user.groupId);
+}
+Template.budget.events({  
+  'submit .budget-new': function(event) {
+
+    event.preventDefault();
+
+    var $bugdetInput = $(event.target).find('#budget');
+    var newBudget = Number($bugdetInput.val());
+
+    // validation
+    check(newBudget, Number);
+
+    // Create budget
+    Meteor.call("createBudget", newBudget);
+  }
+});
 Template.budget.helpers({
-    budget: budgetData
+    budgets: function() {
+        var _budgets = Budgets.find().fetch();
+        return _budgets;
+    }
 });
