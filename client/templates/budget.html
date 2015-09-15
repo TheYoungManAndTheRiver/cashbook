@@ -1,17 +1,16 @@
 <template name="budget">
 
-    <h1  class="headline">budget Site</h1>
-    <form class="budget-new">
-      <input id="budget" type="number" placeholder="Gib dein Budget ein!"><br/>
-      <input type="submit" value="Budget speichern">
-    </form>
-    <p>gib dein budget ein!</p>
+   <h3 class="headline">Budget: </h3>
 
-    <div class="budgets">
-    {{#each budgets}}
-    <div class="budget-content">
-        <h3>{{amount}}</h3>
-    </div>
-    {{/each}}
-        </div>
+    <i class= "fi-shopping-bag iconBudget iconB1"></i>
+    <i class= "fi-euro iconBudget iconB3"></i>
+    <i class= "fi-calendar iconBudget iconB3"></i>
+    <hr class="hrBudget">
+    <div class="iconB1 bspBudget">Toast</div>
+    <div class="iconB2 bspBudget">1,33 €</div>
+    <div class="iconB3 bspBudget">15.09.</div>
+
+    <i class= "btn-primary circle budegtIconTorso fi-torso"  id="invite"></i>
+    <i class= "btn-primary circle budgetIconBill fi-dollar-bill"  id="budgetChange"></i>
+
 </template>

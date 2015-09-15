@@ -1,5 +1,5 @@
 <head>
-    <title>start</title>
+    <title>cash book</title>
 </head>
 
 <body>
@@ -23,6 +23,7 @@
                     {{#if hasGroup}}
                         <li><a class="btn-primary" id="budget">{{yourGroup.name}}</a></li>
                     {{/if}}
+                    <!--<li><a class="btn-primary" id="budget">ihr wg name</a></li>-->
                 </ul>
             </aside>
 
@@ -36,6 +37,12 @@
 
         </div>
     </div>
+
+    <script>
+        $(".off-canvas-list>li>a").click(function(event){event.preventDefault();
+        $(".off-canvas-wrap").removeClass("move-right");});
+    </script>
+
 </body>
 
 <template name="start">
