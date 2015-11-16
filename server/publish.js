@@ -14,11 +14,9 @@ Meteor.publish('budgets', function(groupId) {
   return Budgets.find({groupId: groupId});
 });
 
-// Meteor.publish('expenses', function(budgetId) {
-//   check(budgetId, String);
-
-//   return Expenses.find({budgetId: budgetId});
-// });
+Meteor.publish('expenses', function(groupId) {
+  return Expenses.find({groupId: groupId});
+});
 
 // Meteor.publish('users', function(groupId) {
 //   return Meteor.users.find({groupId: groupId});

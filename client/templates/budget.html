@@ -6,9 +6,27 @@
     <i class= "fi-euro iconBudget iconB3"></i>
     <i class= "fi-calendar iconBudget iconB3"></i>
     <hr class="hrBudget">
-    <div class="iconB1 bspBudget">Toast</div>
-    <div class="iconB2 bspBudget">1,33 €</div>
-    <div class="iconB3 bspBudget">15.09.</div>
+    {{#each expenses}}
+        <div class="iconB1 bspBudget">{{title}}</div>
+        <div class="iconB2 bspBudget">{{amount}}</div>
+        <div class="iconB3 bspBudget">{{formatDate date}}</div>
+    {{/each}}
+    <form class="expense-new">
+        <div class="iconB1 bspBudget">
+            <input required id="new-expense-title" type="text" placeholder="Was hast du gekauft?">
+        </div>
+        <div class="iconB2 bspBudget">
+            <input required id="new-expense-amount" type="number" min="0" max="1000" step="0.01"  placeholder="Wie viel hast du ausgegeben?">
+        </div>
+        <div class="iconB3 bspBudget">
+            <button type="submit" value="Budget speichern" class="budetButton circle">ok</button>
+        </div>
+    </form>
+    <hr class="hrBudget">
+    <div class="iconB1 bspBudget">Rest: </div>
+    <div class="iconB2 bspBudget">{{remainingBudget}}</div>
+    <div class="iconB3 bspBudget"></div>
+
 
     <i class= "btn-primary circle budegtIconTorso fi-torso"  id="invite"></i>
     <i class= "btn-primary circle budgetIconBill fi-dollar-bill"  id="budgetChange"></i>
