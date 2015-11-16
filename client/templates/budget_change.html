@@ -1,7 +1,6 @@
 <template name="budgetChange">
 
-    <h1  class="headline"> Budget change</h1>
-
+    <h1  class="headline">Budget change</h1>
     <hr>
 
     <form class="budget-new">
@@ -11,10 +10,8 @@
 
 
     <div class="budgets">
-    {{#each budgets}}
-    <div class="budget-content">
-        <h3>{{amount}} €</h3>
+        <div class="budget-content">
+            <h2>{{currentBudget.amount}} €</h2>
+        </div>    
     </div>
-    {{/each}}
-        </div>
 </template>
