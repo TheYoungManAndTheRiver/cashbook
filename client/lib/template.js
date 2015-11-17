@@ -18,8 +18,5 @@ Template.registerHelper("remainingBudget", function() {
     .reduce(function(previousExpense, currentExpense){
       return previousExpense + currentExpense;
     });
-  console.log(budget);
-  console.log(expensesTotal);
-
   return budget - expensesTotal;
 });
