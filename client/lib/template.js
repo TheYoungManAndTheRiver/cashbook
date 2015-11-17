@@ -24,3 +24,7 @@ Template.registerHelper("remainingBudget", function() {
     });
   return budget - expensesTotal;
 });
+Template.registerHelper("yourGroup", function () {
+  var group = Groups.findOne();
+  return group;
+});
