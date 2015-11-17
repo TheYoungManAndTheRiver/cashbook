@@ -1,6 +1,8 @@
 <template name="budget">
 
-   <h3 class="headline">Budget: {{formatCurrency currentBudget.amount}} €</h3>
+    <div class="twoColmn1 bspBudget">Budget: </div>
+    <div class="twoColmn2 bspBudget">{{formatCurrency currentBudget.amount}} €</div>
+
 
     <i class= "fi-shopping-bag iconBudget iconB1"></i>
     <i class= "fi-euro iconBudget iconB3"></i>
@@ -24,9 +26,9 @@
         <button type="submit" value="Budget speichern" class="budgetButton">ok</button>
     </form>
     <hr class="hrBudget">
-    <div class="iconB1 bspBudget">Rest: </div>
-    <div class="iconB2 bspBudget">{{formatCurrency remainingBudget}} €</div>
-    <div class="iconB3 bspBudget"></div>
+    <div class="twoColmn1 bspBudget">Rest: </div>
+    <div class="twoColmn2 bspBudget">{{formatCurrency remainingBudget}} €</div>
+
 
 
     <i class= "btn-primary circle budegtIconTorso fi-torso"  id="invite"></i>
