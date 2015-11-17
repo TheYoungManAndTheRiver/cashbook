@@ -1,7 +1,6 @@
 Template.budget.helpers({
     expenses: function() {
         var _expenses = Expenses.find().fetch();
-        console.log(_expenses);
         return _expenses;
     }
 });
