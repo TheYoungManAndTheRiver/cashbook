@@ -8,11 +8,13 @@
     <i class= "fi-euro iconBudget iconB3"></i>
     <i class= "fi-calendar iconBudget iconB3"></i>
     <hr class="hrBudget">
-    {{#each expenses}}
-        <div class="iconB1 bspBudget">{{title}}</div>
-        <div class="iconB2 bspBudget">{{formatCurrency amount}}</div>
-        <div class="iconB3 bspBudget">{{formatDate date}}</div>
-    {{/each}}
+    {{#HammerTouchArea gestureMap=templateGestures}}
+        {{#each expenses}}
+            <div class="iconB1 bspBudget">{{title}}</div>
+            <div class="iconB2 bspBudget">{{formatCurrency amount}}</div>
+            <div class="iconB3 bspBudget">{{formatDate date}}</div>
+        {{/each}}
+    {{/HammerTouchArea}}
     <form class="expense-new">
         <div class="iconB1 bspBudget">
             <input required id="new-expense-title" class="input-budget" type="text" placeholder="Was hast du gekauft?">

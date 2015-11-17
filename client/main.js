@@ -26,12 +26,6 @@ if (Meteor.isClient) {
         hasGroup: function () {
             var _hasGroup = Groups.find().fetch().length > 0
             return _hasGroup;
-        },
-        yourGroup: function () {
-            var group = Groups.find().fetch()[0];
-            if(group) {
-                return group;
-            }
         }
     });
 
