@@ -1,14 +1,14 @@
 <template name="connect">
-    <h1  class="headline">Connect</h1>
+  <h1 class="headline">Connect</h1>
 
-    <hr>
-    Um einer WG beitreten zu können, musst du von einem WG-Mitglied eingeladen werden.<br/><br/>
-    <i class="fi-megaphone iconGroup half1"></i><input class="half2 inputGroup" id="wg-name" type="text" placeholder="Gib den Namen der WG ein" required><br/>
+  <hr>
+  Um einer WG beitreten zu können, musst du von einem WG-Mitglied eingeladen werden.<br/><br/>
+  <i class="fi-megaphone iconGroup half1"></i>
+  <form class="join-group">
+    <input class="group-name" type="text" placeholder="Gib den Namen der WG ein" required><br/>
 
-    <button class="btn-primary" id="connectFail">wenn fail</button>
+    <button type="submit" class="circle circleOk">&gt;</button>
+  </form>
 
-    <button class="btn-primary circle circleOk" id="connectSucces">&gt;</button>
-    <button class="btn-primary circle circleBack" id="getStartet">&lt;</button>
-
-
+  <button class="btn-primary circle circleBack" id="getStartet">&lt;</button>
 </template>
