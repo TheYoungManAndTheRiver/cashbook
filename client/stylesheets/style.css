@@ -116,14 +116,12 @@ h3 {
     border-radius: 100px;
 }
 
-.budetButton {
+.budgetButton {
     background-color: tomato;
-    padding-left: 11px;
-    padding-top: 5px;
-    position: relative;
+    width: 100%;
 }
 
-button.budetButton:hover, button.budetButton:focus {
+button.budgetButton:hover, button.budgetButton:focus {
     background-color: tomato;
 }
 
@@ -248,4 +246,9 @@ hr {
 ul.off-canvas-list li label, ul.off-canvas-list li a {
     border-bottom: 1px solid lemonchiffon;
     color: lemonchiffon;
+}
+
+input.input-budget {
+    border: 1px solid tomato;
+    box-shadow: none;
 }

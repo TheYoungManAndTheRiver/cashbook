@@ -13,14 +13,15 @@
     {{/each}}
     <form class="expense-new">
         <div class="iconB1 bspBudget">
-            <input required id="new-expense-title" type="text" placeholder="Was hast du gekauft?">
+            <input required id="new-expense-title" class="input-budget" type="text" placeholder="Was hast du gekauft?">
         </div>
         <div class="iconB2 bspBudget">
-            <input required id="new-expense-amount" type="number" min="0" max="1000" step="0.01"  placeholder="Wie viel hast du ausgegeben?">
+            <input required id="new-expense-amount" class="input-budget" type="number" min="0" max="1000" step="0.01"  placeholder="Wie viel hast du ausgegeben?">
         </div>
         <div class="iconB3 bspBudget">
-            <button type="submit" value="Budget speichern" class="budetButton circle">ok</button>
+
         </div>
+        <button type="submit" value="Budget speichern" class="budgetButton">ok</button>
     </form>
     <hr class="hrBudget">
     <div class="iconB1 bspBudget">Rest: </div>
