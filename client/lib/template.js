@@ -5,6 +5,9 @@ Template.registerHelper("formatDate", function(timestamp) {
   var date = new Date(timestamp);
   return date.toLocaleDateString("de-DE").slice(0,-4);
 });
+Template.registerHelper("formatCurrency", function(amount) {
+  return amount.toLocaleString("de-DE", {minimumFractionDigits: 2, maximumFractionDigits: 2});
+});
 Template.registerHelper("remainingBudget", function() {
   var budget = Budgets.find().fetch().slice(-1)[0].amount;
   var expenses = Expenses.find().fetch();
@@ -15,8 +18,5 @@ Template.registerHelper("remainingBudget", function() {
     .reduce(function(previousExpense, currentExpense){
       return previousExpense + currentExpense;
     });
-  console.log(budget);
-  console.log(expensesTotal);
-
   return budget - expensesTotal;
 });

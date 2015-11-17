@@ -7,8 +7,8 @@ Template.budgetChange.events({
 
     event.preventDefault();
 
-    var $bugdetInput = $(event.target).find('#budget');
-    var newBudget = Number($bugdetInput.val());
+    var $bugdetInput = $(event.target).find('#budget-amount');
+    var newBudget = Number($bugdetInput.val().replace(",", "."));
 
     // validation
     check(newBudget, Number);

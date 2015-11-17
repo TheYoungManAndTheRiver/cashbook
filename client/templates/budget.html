@@ -1,6 +1,6 @@
 <template name="budget">
 
-   <h3 class="headline">Budget: {{currentBudget.amount}} €</h3>
+   <h3 class="headline">Budget: {{formatCurrency currentBudget.amount}} €</h3>
 
     <i class= "fi-shopping-bag iconBudget iconB1"></i>
     <i class= "fi-euro iconBudget iconB3"></i>
@@ -8,7 +8,7 @@
     <hr class="hrBudget">
     {{#each expenses}}
         <div class="iconB1 bspBudget">{{title}}</div>
-        <div class="iconB2 bspBudget">{{amount}}</div>
+        <div class="iconB2 bspBudget">{{formatCurrency amount}}</div>
         <div class="iconB3 bspBudget">{{formatDate date}}</div>
     {{/each}}
     <form class="expense-new">
@@ -24,7 +24,7 @@
     </form>
     <hr class="hrBudget">
     <div class="iconB1 bspBudget">Rest: </div>
-    <div class="iconB2 bspBudget">{{remainingBudget}}</div>
+    <div class="iconB2 bspBudget">{{formatCurrency remainingBudget}} €</div>
     <div class="iconB3 bspBudget"></div>
 
 
