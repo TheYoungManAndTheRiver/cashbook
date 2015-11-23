@@ -3,13 +3,17 @@ Template.registerHelper("currentBudget", function() {
 });
 Template.registerHelper("formatDate", function(timestamp) {
   var date = new Date(timestamp);
-  return date.toLocaleDateString("de-DE").slice(0,-4);
+  var day = date.getDate();
+  var month = date.getMonth() + 1;
+
+  return day + "." + month + ".";
 });
 Template.registerHelper("formatCurrency", function(amount) {
   if(!amount) {
     amount = 0;
   }
-  return amount.toLocaleString("de-DE", {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  var output = amount.toFixed(2).replace(".", ",");
+  return output;
 });
 Template.registerHelper("remainingBudget", function() {
   var budget = Budgets.find().fetch().slice(-1)[0].amount;
