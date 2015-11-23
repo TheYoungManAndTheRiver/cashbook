@@ -4,13 +4,11 @@ Template.budget.helpers({
         return _expenses;
     },
     templateGestures: {
-    'swipeleft .bspBudget': function (event, templateInstance) {
-        // here goes our swipe code ;-)
-      Session.set("board", "getStartet")
-        console.log("Hammertime!");
-      /* `event` is the Hammer.js event object */
-      /* `templateInstance` is the `Blaze.TemplateInstance` */
-      /* `this` is the data context of the element in your template, so in this case `someField` from `someArray` in the template */
+    'swipeleft .expense': function (event, templateInstance) {
+      $(event.target).closest(".expense").addClass("show-trash");
+    },
+    'swiperight .expense': function (event, templateInstance) {
+      $(event.target).closest(".expense").removeClass("show-trash");
     }
   }
 });
@@ -33,5 +31,9 @@ Template.budget.events({
 
     $titleInput.val("");
     $amountInput.val("");
+  },
+  'click .expense-delete': function (event) {
+    var expenseId = $(event.target).closest(".expense").data("id");
+    Meteor.call("deleteExpense", expenseId);
   }
 });

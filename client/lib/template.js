@@ -21,7 +21,7 @@ Template.registerHelper("remainingBudget", function() {
     })
     .reduce(function(previousExpense, currentExpense){
       return previousExpense + currentExpense;
-    });
+    }, 0);
   return budget - expensesTotal;
 });
 Template.registerHelper("yourGroup", function () {

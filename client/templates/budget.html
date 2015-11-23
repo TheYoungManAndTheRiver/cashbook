@@ -10,10 +10,13 @@
     <hr class="hrBudget">
     {{#HammerTouchArea gestureMap=templateGestures}}
         {{#each expenses}}
-            <div class="bspBudget">
+            <div class="expense" data-id="{{_id}}">
                 <div class="iconB1">{{title}}</div>
-                <div class="iconB2">{{formatCurrency amount}}</div>
-                <div class="iconB3">{{formatDate date}}</div>
+                <div class="iconB2 expense-data">{{formatCurrency amount}}</div>
+                <div class="iconB3 expense-data">{{formatDate date}}</div>
+                <div class="expense-delete">
+                    <i class="fi-trash"></i>
+                </div>
             </div>
         {{/each}}
     {{/HammerTouchArea}}
