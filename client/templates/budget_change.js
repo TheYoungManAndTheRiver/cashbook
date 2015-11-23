@@ -15,6 +15,8 @@ Template.budgetChange.events({
 
     // Create budget
     Meteor.call("createBudget", newBudget);
+
+    Session.set("board", "budget"); 
   }
 });
 Template.budgetChange.helpers({

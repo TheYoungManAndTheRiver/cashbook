@@ -6,6 +6,7 @@ Template.budget.helpers({
     templateGestures: {
     'swipeleft .bspBudget': function (event, templateInstance) {
         // here goes our swipe code ;-)
+      Session.set("board", "getStartet")
         console.log("Hammertime!");
       /* `event` is the Hammer.js event object */
       /* `templateInstance` is the `Blaze.TemplateInstance` */
