@@ -124,23 +124,17 @@ button.budgetButton:hover, button.budgetButton:focus {
 }
 
 .budegtIconTorso {
-    background-color: tomato;
-    color: lemonchiffon;
     padding-left: 2px;
     padding-top: 11px;
-    left: 15px;
-    bottom:15px;
-    float: left;
+    background-color: tomato;
+    color: lemonchiffon;
 }
 
 .budgetIconBill {
-    background-color: tomato;
-    color: lemonchiffon;
     padding-left: 3px;
     padding-top: 12px;
-    right: 15px;
-    bottom:15px;
-    float: right;
+    background-color: tomato;
+    color: lemonchiffon;
 }
 
 .circleBack {
@@ -261,12 +255,39 @@ input.input-budget {
     overflow: scroll;
 }
 
-.circleBudget {
+.circleNotFixed {
     display: block;
-    background: tomato;
     border-radius: 100%;
     height: 72px;
     width: 73px;
     font-size: 47px;
     margin: 6px;
+}
+
+.red {
+    background: tomato;
+}
+
+.green {
+    background: limegreen;
+}
+
+.right {
+    right: 15px;
+    bottom:15px;
+    float: right;
+}
+
+.left {
+    left: 15px;
+    bottom:15px;
+    float: left;
+}
+
+.marginNormalTop {
+    margin-top: 30px;
+}
+
+.marginTopBudget {
+    margin-top: 100px;
 }
