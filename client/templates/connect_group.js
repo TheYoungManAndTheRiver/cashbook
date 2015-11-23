@@ -8,6 +8,8 @@ Template.connect.events({
 
     // Create budget
     console.log("Joining Group " + groupName);
+
+    // try to join and redirect
     Meteor.call("joinGroup", groupName);
   }
 });
