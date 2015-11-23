@@ -190,6 +190,7 @@ h1, body {
 
 #main {
     padding: 5px;
+    overflow-x: hidden;
 }
 
 .naviDotsGetStarted{
