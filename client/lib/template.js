@@ -1,6 +1,9 @@
 Template.registerHelper("currentBudget", function() {
   return Budgets.find().fetch().slice(-1)[0];
 });
+Template.registerHelper("currentDate", function() {
+  return Date.now();
+});
 Template.registerHelper("formatDate", function(timestamp) {
   var date = new Date(timestamp);
   var day = date.getDate();
