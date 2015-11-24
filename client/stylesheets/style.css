@@ -191,6 +191,7 @@ h1, body {
 #main {
     padding: 5px;
     overflow-x: hidden;
+    height: 80%;
 }
 
 .naviDotsGetStarted{
@@ -322,4 +323,14 @@ input.input-budget {
 
 .expense > .iconB3 {
     width: 15%;
+}
+
+button.green:focus, button.green:hover {
+    color: lemonchiffon;
+    background: limegreen;
+}
+
+button.red:focus, button.red:hover {
+    color: lemonchiffon;
+    background: tomato;
 }
